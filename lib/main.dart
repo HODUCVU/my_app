@@ -21,26 +21,48 @@ class Home extends StatelessWidget {
       ),
 
       body: //const Text('OK, I\'m right'),
-      const Center( // use this to center body app
+        Center( // use this to center body app
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(image: AssetImage('assets/loli1.png')),
-            //SizedBox(height: 20), // Add some spacing between the image and text
-            Text('OK, I\'m right',
-              style: TextStyle(
-              fontSize: 30.0,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.bold,
-              color: Colors.cyan,
-              fontFamily: 'Itim', // added fonts/Itim-Regular.ttf and revise pubspec.yaml about fonts.
+            const Icon(Icons.signal_wifi_statusbar_connected_no_internet_4_sharp,
+            color: Colors.greenAccent,
+            size: 100.0),
+            ElevatedButton(
+              onPressed: () {
+
+              }, 
+              child: const Column( 
+                children: [
+                Text('Click me now!!!'),
+                Icon(Icons.bubble_chart),
+                ]
               ),
-            ), //must add child: to use its parents
+              
+            ),
+            const SizedBox(height: 30),
+
+            ElevatedButton.icon(
+              onPressed: () {}, 
+              icon: const Icon(
+                Icons.access_alarm_outlined
+                ), 
+              label: const Text('Alarm'),
+              style:ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent),
+            ),
+
+            const SizedBox(height: 30),
+
+            IconButton(
+              onPressed: () {}, 
+              icon: const Icon(Icons.mail),
+              color: Colors.greenAccent),
           ],
         )
       ),
       floatingActionButton:  FloatingActionButton(onPressed: () {
-        print('Clicked');
+       
       },
       child: const Text('Click'),),
       backgroundColor: Colors.deepOrange[200],

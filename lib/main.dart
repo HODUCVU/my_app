@@ -21,25 +21,29 @@ class Home extends StatelessWidget {
       ),
 
       body: 
-      
-        Container(
-          padding: const EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 30.0),// can chinh childs. all(),...
-          margin: const EdgeInsets.all(30.0), //can chinh vi tri Container
-          color: Colors.white,
-          child: const Text('Xin chao!!', selectionColor: Colors.amber,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            const Text('Hello World!!'),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Click'),
+              
+            ),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Text("Container"),
+              color: Colors.red,
+            )
+          ],
         )
       ,
-      /*
-      const Padding(
-        padding: EdgeInsets.all(50.0),
-        child: Text('XIN CHAO'),
-        )
-      ,
-      */
       floatingActionButton:  FloatingActionButton(
         onPressed: () {
         
         },
+
         child: const Text('Click'),
         ),
         backgroundColor: Colors.deepOrange[200],

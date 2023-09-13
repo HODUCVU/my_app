@@ -21,23 +21,43 @@ class Home extends StatelessWidget {
       ),
 
       body: 
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.end,
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            const Text('Hello World!!'),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Click'),
-              
-              
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                Text('Column 1'),
+                /*
+                ElevatedButton(onPressed: () {}, 
+                child: const Text('Click1'),
+                )
+                */
+                Image(image: AssetImage('assets/loli3.png')),
+              ],
             ),
-            Container(
-              padding: EdgeInsets.all(20.0),
-              child: Text("Container"),
-              color: Colors.red,
-            )
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+             // crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text('Column2'),
+                Image(image: AssetImage('assets/loli1.png')),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              //crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text('Column2'),
+                Image(image: AssetImage('assets/loli2.png')),
+      
+              ],
+            ),
           ],
+          
         )
       ,
       floatingActionButton:  FloatingActionButton(
@@ -47,7 +67,7 @@ class Home extends StatelessWidget {
 
         child: const Text('Click'),
         ),
-        backgroundColor: Colors.deepOrange[200],
+        backgroundColor: Colors.white,
     );
   }
 }

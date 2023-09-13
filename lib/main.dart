@@ -21,43 +21,37 @@ class Home extends StatelessWidget {
       ),
 
       body: 
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              //crossAxisAlignment: CrossAxisAlignment.end,
-              children: <Widget>[
-                Text('Column 1'),
-                /*
-                ElevatedButton(onPressed: () {}, 
-                child: const Text('Click1'),
-                )
-                */
-                Image(image: AssetImage('assets/loli3.png')),
-              ],
+        Row(
+          children: [
+            const Expanded(
+              flex: 5,
+              child: Image(image: AssetImage('assets/loli1.png')),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-             // crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text('Column2'),
-                Image(image: AssetImage('assets/loli1.png')),
-              ],
+            Expanded( //expand object for full screen ~
+              flex: 1, //length or similar
+              child: Container(
+                padding: const EdgeInsets.all(30.0),
+                color: Colors.blueGrey,
+                child: const Text('1'),
+              ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              //crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text('Column2'),
-                Image(image: AssetImage('assets/loli2.png')),
-      
-              ],
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: const EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child: const Text('2'),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: const EdgeInsets.all(30.0),
+                color: Colors.lightGreen,
+                child: const Text('3'),
+              ),
             ),
           ],
-          
         )
       ,
       floatingActionButton:  FloatingActionButton(
